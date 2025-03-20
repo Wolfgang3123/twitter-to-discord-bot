@@ -50,7 +50,7 @@ def send_to_discord(username, text, link):
         print(f"Error sending to Discord: {e}")
 
 # Run the bot every 2 minutes
-while True:
-    for username, nitter_url in NITTER_URLS.items():
-        get_latest_tweet(username, nitter_url)
-    time.sleep(120)  # Wait 2 minutes before checking again
+for username, nitter_url in NITTER_URLS.items():
+    get_latest_tweet(username, nitter_url)
+print("✅ Script executed successfully.")
+
